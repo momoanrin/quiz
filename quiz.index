@@ -1,32 +1,32 @@
 const quiz = [
   {
-    question: "ゲーム市場、最も売れたゲーム機は次の内どれ？",
+    question: "世界で一番多い血液型は何型でしょうか？",
     answers: [  
-    "スーパーファミコン",
-    "プレイステーション2",
-    "ニンテンドースイッチ",
-    "ニンテンドーDS"
+    "A型",
+    "B型",
+    "O型",
+    "AB型"
   ],
-  correct: "ニンテンドーDS"
+  correct: "O型"
   },
   {   
-    question: "糸井重里が企画に関わった、任天堂の看板ゲームといえば？",
+    question: "うわばみとはどんな人のことでしょうか？",
     answers: [  
-    "MOTHER2",
-    "スーパーマリオブラザーズ３",
-    "スーパードンキーコング",
-    "星のカービィ"
+    "大食いの人",
+    "酒をたくさん飲む人",
+    "よく寝る人",
+    "よく喋る人"
 ],
-correct: "MOTHER2" },
+correct: "酒をたくさん飲む人" },
   {
-    question: "ファイナルファンタジーⅣの主人公の名前は？",
+    question: "東京ディズニーリゾートには全部でいくつの隠れミッキーがあるでしょうか？",
     answers: [  
-    "フリオニール",
-    "クラウド",
-    "ティーダ",
-    "セシル"
+    "34個",
+    "77個",
+    "365個",
+    "総数は分からない"
 ],
-correct: "セシル"}
+correct: "総数は分からない"}
 ];
 const quizLength = quiz.length;
 let quizIndex = 0;
@@ -75,3 +75,15 @@ if(quizIndex < quizLength){
 
 }
 };
+
+
+
+
+// ボタンをクリックしたら正誤判定
+let handlerIndex = 0;
+while (handlerIndex < buttonLength) {
+  $button [handlerIndex].addEventListener("click",(e) => {
+    clickHandler(e);
+  });
+  handlerIndex++;
+}
